@@ -24,7 +24,8 @@ function getOrCreateAgent(sessionId: string): Agent {
     // Create a new agent - using Groq model (free tier)
     const agent = new Agent({
       name: "CryptoMarket Assistant",
-      behavior: "You are a crypto price tracker. You are given a coin id and you need to get the price of the coin in USD",
+      behavior:
+        "You are a crypto price tracker. You are given a coin id and you need to get the price of the coin in USD",
       // Using Groq's Llama model (free tier)
       model: Model.Groq("llama-3.3-70b-versatile"),
     });
@@ -77,6 +78,9 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ response });
   } catch (error) {
     console.error("Chat error:", error);
-    return NextResponse.json({ error: error instanceof Error ? error.message : "Unknown error" }, { status: 500 });
+    return NextResponse.json(
+      { error: error instanceof Error ? error.message : "Unknown error" },
+      { status: 500 }
+    );
   }
 }
