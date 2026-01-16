@@ -1,4 +1,4 @@
-import { Agent, Model } from "@smythos/sdk";
+import { Agent } from "@smythos/sdk";
 import { NextRequest, NextResponse } from "next/server";
 
 /**
@@ -11,7 +11,7 @@ import { NextRequest, NextResponse } from "next/server";
  * - Using agent.chat() for conversation
  * - Agent memory within a session
  *
- * Using Groq model (free tier) instead of OpenAI
+ * Using OpenAI gpt-4o-mini (cheapest and fastest)
  */
 
 // Store chat sessions in memory (for demo purposes)
@@ -21,13 +21,13 @@ const agents = new Map<string, Agent>();
 
 function getOrCreateAgent(sessionId: string): Agent {
   if (!agents.has(sessionId)) {
-    // Create a new agent - using Groq model (free tier)
+    // Create a new agent - using OpenAI gpt-4o-mini (cheapest)
     const agent = new Agent({
       name: "CryptoMarket Assistant",
       behavior:
-        "You are a crypto price tracker. You are given a coin id and you need to get the price of the coin in USD",
-      // Using Groq's Llama model (free tier)
-      model: Model.Groq("llama-3.3-70b-versatile"),
+        "You are a crypto price tracker. You are given a coin id and you need to get the price of the coin in USD. Be concise.",
+      // Using gpt-4o-mini - cheapest and fastest OpenAI model
+      model: "gpt-4o-mini",
     });
 
     // Add the Price skill - same as 03-chat.ts example
