@@ -39,6 +39,15 @@ const practiceExamples: PracticeExample[] = [
     sourceFile: "04-chat-interactive-persistent.ts",
     href: "/practice/03-persistent-chat",
   },
+  {
+    id: "04",
+    title: "Local Model Chat",
+    description: "Chat using a local model (Ollama or LM Studio).",
+    complexity: 3,
+    features: ["Local Model", "Ollama", "Offline capable"],
+    sourceFile: "04-chat-with-local-model.ts",
+    href: "/practice/04-local-model",
+  },
 ];
 
 export default function PracticePage() {
