@@ -39,42 +39,6 @@ const practiceExamples: PracticeExample[] = [
     sourceFile: "04-chat-interactive-persistent.ts",
     href: "/practice/03-persistent-chat",
   },
-  {
-    id: "04",
-    title: "Planner Coder",
-    description: "Specialized agent with planning mode and code generation skills.",
-    complexity: 4,
-    features: ["Planner Mode", "Code Skills", "Step-by-step Planning"],
-    sourceFile: "04.1-chat-planner-coder.ts",
-    href: "/practice/04-planner-chat",
-  },
-  {
-    id: "05",
-    title: "MCP Integration",
-    description: "Exposing an agent as a Model Context Protocol (MCP) server.",
-    complexity: 3,
-    features: ["MCP Server", "SSE Transport", "Skill Discovery"],
-    sourceFile: "05-mcp.ts",
-    href: "/practice/05-mcp",
-  },
-  {
-    id: "06",
-    title: "Attachment Handling",
-    description: "Multi-modal agent that can process images and other file attachments.",
-    complexity: 3,
-    features: ["Image Analysis", "Multi-modal", "File Support"],
-    sourceFile: "06-handle-attachment-*.ts",
-    href: "/practice/06-attachments",
-  },
-  {
-    id: "07",
-    title: "Vector Storage & RAG",
-    description: "Knowledge-based agent using RAMVectorDB for RAG and Local Storage for files.",
-    complexity: 4,
-    features: ["Vector Search", "RAMVectorDB", "Local Storage", "Doc Parsing"],
-    sourceFile: "10-llm-storage-vectors.ts",
-    href: "/practice/07-vector-storage",
-  },
 ];
 
 export default function PracticePage() {
@@ -151,7 +115,9 @@ export default function PracticePage() {
             <p className="text-gray-500">More practice examples coming soon...</p>
             <p className="mt-1 text-sm text-gray-600">
               Local Models, Observability, Planner Mode, and more!
-            </p>
+                      </p>
+
+                      <a href="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus vitae ratione sint magnam. Quis voluptas dolorem quas minima sit quisquam vitae fugiat, in omnis, dolor fuga ratione nostrum, perferendis iusto.</a>
           </div>
         </div>
       </main>
