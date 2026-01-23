@@ -57,6 +57,15 @@ const practiceExamples: PracticeExample[] = [
     sourceFile: "02-opentelemetry-chat-interactive.ts",
     href: "/practice/05-observability",
   },
+  {
+    id: "06",
+    title: "Planner Coder",
+    description: "Specialized agent with planning mode and code generation skills.",
+    complexity: 5,
+    features: ["Planner Mode", "Code Skills", "Step-by-step Planning", "Task Board"],
+    sourceFile: "04.1-chat-planner-coder.ts",
+    href: "/practice/06-planner-chat",
+  },
 ];
 
 export default function PracticePage() {
