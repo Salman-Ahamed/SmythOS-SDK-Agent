@@ -25,7 +25,7 @@ export default function PlannerChatPage() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [sessionId] = useState(() => `planner-${Date.now()}`);
+  const [sessionId, setSessionId] = useState(() => `planner-${Date.now()}`);
   const [currentTasks, setCurrentTasks] = useState<Record<string, Task>>({});
   const [status, setStatus] = useState<string>("");
   
@@ -39,6 +39,15 @@ export default function PlannerChatPage() {
   useEffect(() => {
     scrollToBottom();
   }, [messages, status, currentTasks]);
+
+  const resetSession = () => {
+    setMessages([]);
+    setCurrentTasks({});
+    setStatus("");
+    setIsLoading(false);
+    streamingContentRef.current = "";
+    setSessionId(`planner-${Date.now()}`);
+  };
 
   const sendMessage = async () => {
     if (!input.trim() || isLoading) return;
@@ -310,6 +319,13 @@ export default function PlannerChatPage() {
             </div>
           </div>
           <div className="flex items-center gap-4">
+            <button 
+              onClick={resetSession}
+              className="text-[10px] font-bold text-slate-500 hover:text-red-400 transition-colors uppercase tracking-[0.2em] flex items-center gap-2 border border-slate-800 rounded-lg px-3 py-1.5 bg-slate-900/50"
+            >
+              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
+              Reset_Session
+            </button>
             <div className="hidden sm:flex flex-col items-end mr-4">
               <span className="text-[10px] font-bold text-slate-600 uppercase">Provider</span>
               <span className="text-xs font-mono text-slate-400">ANTHROPIC_HAIKU</span>
