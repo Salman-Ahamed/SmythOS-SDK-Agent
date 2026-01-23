@@ -48,6 +48,15 @@ const practiceExamples: PracticeExample[] = [
     sourceFile: "04-chat-with-local-model.ts",
     href: "/practice/04-local-model",
   },
+  {
+    id: "05",
+    title: "Observability Chat",
+    description: "Chat with OpenTelemetry enabled for tracing and monitoring.",
+    complexity: 3,
+    features: ["OpenTelemetry", "Tracing", "Monitoring", "SRE.init()"],
+    sourceFile: "02-opentelemetry-chat-interactive.ts",
+    href: "/practice/05-observability",
+  },
 ];
 
 export default function PracticePage() {

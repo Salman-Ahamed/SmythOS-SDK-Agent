@@ -28,7 +28,7 @@ d:\codes\work\smyth-os\sre\examples\01-agent-code-skill\
 | 2 | `03.1-chat-streaming.ts` | 5 | ⭐⭐ | 53 | Learning streaming | ✅ Done |
 | 3 | `04-chat-interactive-persistent.ts` | 8 | ⭐⭐⭐ | 134 | Production chat app | ✅ Done |
 | 4 | `04-chat-with-local-model.ts` | 9 | ⭐⭐⭐ | 158 | Local model usage | ✅ Done |
-| 5 | `02-opentelemetry-chat-interactive.ts` | 9 | ⭐⭐⭐ | 151 | Monitoring & observability | ⏳ Pending |
+| 5 | `02-opentelemetry-chat-interactive.ts` | 9 | ⭐⭐⭐ | 151 | Monitoring & observability | ✅ Done |
 | 6 | `04.1-chat-planner-coder.ts` | 15+ | ⭐⭐⭐⭐⭐ | 619 | Advanced workflows | ⏳ Pending |
 
 ### Detailed Feature Breakdown
@@ -178,7 +178,7 @@ agent.addSkill({ name: 'ExecuteCode', ... });
 
 ## Current Implementation Status
 
-### Completed Examples (4/6)
+### Completed Examples (5/6)
 
 | # | Example | Source File | Status | Route |
 |---|---------|-------------|--------|-------|
@@ -186,12 +186,12 @@ agent.addSkill({ name: 'ExecuteCode', ... });
 | 02 | Streaming Chat | `03.1-chat-streaming.ts` | ✅ Done | `/practice/02-streaming-chat` |
 | 03 | Persistent Chat | `04-chat-interactive-persistent.ts` | ✅ Done | `/practice/03-persistent-chat` |
 | 04 | Local Model Chat | `04-chat-with-local-model.ts` | ✅ Done | `/practice/04-local-model` |
+| 05 | Observability Chat | `02-opentelemetry-chat-interactive.ts` | ✅ Done | `/practice/05-observability` |
 
-### Pending Examples (2/6)
+### Pending Examples (1/6)
 
 | # | Example | Source File | Status | Priority |
 |---|---------|-------------|--------|----------|
-| 05 | Observability Chat | `02-opentelemetry-chat-interactive.ts` | ⏳ Pending | Medium |
 | 06 | Planner Coder | `04.1-chat-planner-coder.ts` | ⏳ Pending | High (most complex) |
 
 ---
