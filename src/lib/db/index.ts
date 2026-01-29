@@ -34,6 +34,7 @@ export const sdkExamples = [
         icon: ChatBubbleIcon,
         gradient: "from-indigo-500 to-purple-500",
         status: "completed" as const,
+        featured: true,
     },
     {
         id: "02",
@@ -45,6 +46,7 @@ export const sdkExamples = [
         icon: StreamIcon,
         gradient: "from-cyan-500 to-teal-500",
         status: "completed" as const,
+        featured: true,
     },
     {
         id: "03",
@@ -56,6 +58,7 @@ export const sdkExamples = [
         icon: DatabaseIcon,
         gradient: "from-purple-500 to-pink-500",
         status: "completed" as const,
+        featured: false,
     },
     {
         id: "04",
@@ -67,6 +70,7 @@ export const sdkExamples = [
         icon: ServerIcon,
         gradient: "from-orange-500 to-red-500",
         status: "completed" as const,
+        featured: false,
     },
     {
         id: "05",
@@ -78,6 +82,7 @@ export const sdkExamples = [
         icon: ChartIcon,
         gradient: "from-green-500 to-emerald-500",
         status: "completed" as const,
+        featured: false,
     },
     {
         id: "06",
@@ -89,6 +94,7 @@ export const sdkExamples = [
         icon: PlannerIcon,
         gradient: "from-violet-500 to-fuchsia-500",
         status: "completed" as const,
+        featured: true,
     },
     {
         id: "07",
@@ -100,6 +106,7 @@ export const sdkExamples = [
         icon: ImageIcon,
         gradient: "from-rose-500 to-amber-500",
         status: "completed" as const,
+        featured: true,
     },
     {
         id: "08",
@@ -111,6 +118,7 @@ export const sdkExamples = [
         icon: DocumentIcon,
         gradient: "from-blue-500 to-cyan-500",
         status: "completed" as const,
+        featured: true,
     },
     {
         id: "09",
@@ -122,6 +130,7 @@ export const sdkExamples = [
         icon: GitHubOctocatIcon,
         gradient: "from-gray-600 to-gray-800",
         status: "completed" as const,
+        featured: false,
     },
     {
         id: "10",
@@ -133,8 +142,12 @@ export const sdkExamples = [
         icon: WorkflowIcon,
         gradient: "from-purple-500 to-pink-500",
         status: "completed" as const,
+        featured: true,
     },
 ];
+
+// Featured examples for home page (subset of sdkExamples)
+export const featuredExamples = sdkExamples.filter((example) => example.featured);
 
 // SDK Capabilities/Features
 export const features = [
@@ -218,12 +231,18 @@ export const footerLinks: FooterLinks = {
     contact: [
         {
             id: 1,
+            name: "GitHub",
+            Icon: GitHubOctocatIcon,
+            path: "https://github.com/Salman-Ahamed",
+        },
+        {
+            id: 2,
             name: "LinkedIn",
             Icon: LinkedInIcon,
             path: "https://www.linkedin.com/in/salman-ahamad-as/",
         },
-        { id: 2, name: "Portfolio", Icon: GlobeIcon, path: "https://eyachirarafat.vercel.app/" },
-        { id: 3, name: "Email", Icon: MailIcon, path: "mailto:shahriyar.hosen.dev@gmail.com" },
+        { id: 3, name: "Portfolio", Icon: GlobeIcon, path: "https://salman-ahamed.vercel.app" },
+        { id: 4, name: "Email", Icon: MailIcon, path: "mailto:salman.0210.as@gmail.com" },
     ],
     privacy: [
         { id: 1, name: "SmythOS Platform", path: "https://smythos.com" },
