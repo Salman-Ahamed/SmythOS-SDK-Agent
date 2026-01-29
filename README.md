@@ -38,7 +38,7 @@ Each example is a fully working Next.js application with:
 ### Prerequisites
 
 - **Node.js** 20.9.0 or higher
-- **pnpm** (recommended) or npm/yarn/bun
+- **Bun** (recommended) or pnpm/npm/yarn
 - **API Keys** for LLM providers (OpenAI, Anthropic, Groq, etc.)
 
 ### Installation
@@ -49,14 +49,14 @@ git clone https://github.com/smythos/sdk-agent.git
 cd sdk-agent
 
 # 2. Install dependencies
-pnpm install
+bun install
 
 # 3. Set up environment variables
 cp .env.example .env.local
 # Edit .env.local and add your API keys
 
 # 4. Start the development server
-pnpm dev
+bun dev
 ```
 
 ### Open in Browser
@@ -304,18 +304,18 @@ sdk-agent/
 
 ```bash
 # Development
-pnpm dev              # Start dev server with Turbopack
-pnpm build            # Production build
-pnpm start            # Start production server
+bun dev              # Start dev server with Turbopack
+bun run build        # Production build
+bun start            # Start production server
 
 # Code Quality
-pnpm lint             # Run ESLint
-pnpm lint:fix         # Fix ESLint errors
-pnpm format           # Format with Prettier
-pnpm format:check     # Check formatting
+bun run lint         # Run ESLint
+bun run lint:fix     # Fix ESLint errors
+bun run format       # Format with Prettier
+bun run format:check # Check formatting
 
 # Maintenance
-pnpm clear-cache      # Clear Next.js cache and reinstall
+bun run clear-cache  # Clear Next.js cache and reinstall
 ```
 
 ---
