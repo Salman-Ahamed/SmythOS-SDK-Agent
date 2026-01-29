@@ -99,7 +99,7 @@ function createAgents(sessionId: string): Record<string, WorkflowAgent> {
     };
 }
 
-// Workflow execution
+// Workflow execution - using agent.prompt() directly (not chat sessions)
 async function runWorkflow(
     topic: string,
     agents: Record<string, WorkflowAgent>,
@@ -114,10 +114,10 @@ async function runWorkflow(
     });
 
     try {
-        const researcherChat = agents.researcher.agent.chat();
         let researchContent = "";
 
-        const researchStream = await researcherChat
+        // Use agent.prompt() directly
+        const researchStream = await agents.researcher.agent
             .prompt(`Research the following topic thoroughly and provide key findings: "${topic}"`)
             .stream();
 
@@ -161,10 +161,10 @@ async function runWorkflow(
     });
 
     try {
-        const writerChat = agents.writer.agent.chat();
         let writerContent = "";
 
-        const writerStream = await writerChat
+        // Use agent.prompt() directly
+        const writerStream = await agents.writer.agent
             .prompt(
                 `Based on the following research, write a comprehensive and engaging article about "${topic}":\n\n${results.research}`
             )
@@ -210,10 +210,10 @@ async function runWorkflow(
     });
 
     try {
-        const editorChat = agents.editor.agent.chat();
         let editorContent = "";
 
-        const editorStream = await editorChat
+        // Use agent.prompt() directly
+        const editorStream = await agents.editor.agent
             .prompt(
                 `Review and improve the following article. Provide the final polished version with a quality score (1-10):\n\n${results.draft}`
             )
