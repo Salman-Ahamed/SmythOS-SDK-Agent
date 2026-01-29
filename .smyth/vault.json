@@ -1,0 +1,14 @@
+{
+  "default": {
+    "echo": "",
+    "openai": "$env(OPENAI_API_KEY)",
+    "anthropic": "$env(ANTHROPIC_API_KEY)",
+    "googleai": "$env(GOOGLE_AI_API_KEY)",
+    "groq": "$env(GROQ_API_KEY)",
+    "togetherai": "$env(TOGETHER_API_KEY)",
+    "xai": "$env(XAI_API_KEY)",
+    "deepseek": "$env(DEEPSEEK_API_KEY)",
+    "tavily": "$env(TAVILY_API_KEY)",
+    "scrapfly": "$env(SCRAPFLY_API_KEY)"
+  }
+}
