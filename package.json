@@ -1,6 +1,7 @@
 {
-  "name": "next.js-typescript-starting-template",
-  "version": "1.4.0",
+  "name": "smythos-sdk-practice",
+  "version": "1.0.0",
+  "description": "Learn to build AI Agents with SmythOS SDK through hands-on examples",
   "private": true,
   "author": {
     "name": "Salman Ahamed",

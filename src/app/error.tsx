@@ -2,8 +2,6 @@
 
 import { FC, useEffect } from "react";
 
-import { Button } from "@/components/ui";
-
 type ErrorProps = { error: Error; reset: () => void };
 const Error: FC<ErrorProps> = ({ error, reset }) => {
   // Log the error to an error reporting service
@@ -28,23 +26,19 @@ const Error: FC<ErrorProps> = ({ error, reset }) => {
           </p>
 
           <div className="mt-2 flex flex-col gap-3 sm:mt-4 sm:flex-row sm:gap-4">
-            <Button
-              variant="primary"
-              size="lg"
+            <button
               onClick={() => reset()}
-              className="min-w-[160px] bg-indigo-600 hover:bg-indigo-700 sm:min-w-[200px]"
+              className="min-w-[160px] rounded-md bg-indigo-600 px-6 py-3 text-lg font-medium text-white transition-colors hover:bg-indigo-700 sm:min-w-[200px]"
             >
               Try again
-            </Button>
+            </button>
 
-            <Button
-              variant="outline"
-              size="lg"
+            <button
               onClick={() => (window.location.href = "/")}
-              className="min-w-[160px] border-gray-700/50 bg-gray-800/50 backdrop-blur-sm hover:bg-gray-700/50 sm:min-w-[200px]"
+              className="min-w-[160px] rounded-md border border-gray-700/50 bg-gray-800/50 px-6 py-3 text-lg font-medium text-white backdrop-blur-sm transition-colors hover:bg-gray-700/50 sm:min-w-[200px]"
             >
               Go to homepage
-            </Button>
+            </button>
           </div>
 
           {process.env.NODE_ENV === "development" && (

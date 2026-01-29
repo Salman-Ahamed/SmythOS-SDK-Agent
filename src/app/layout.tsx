@@ -6,8 +6,14 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Next.js TypeScript Template",
-  description: "A professional Next.js template with TypeScript",
+  title: {
+    default: "SmythOS SDK Practice",
+    template: "%s | SmythOS SDK",
+  },
+  description:
+    "Learn to build AI Agents with SmythOS SDK through hands-on examples. From basic chat to advanced planner-coder workflows.",
+  keywords: ["SmythOS", "SDK", "AI", "Agents", "LLM", "OpenAI", "Next.js", "TypeScript"],
+  authors: [{ name: "SmythOS Team" }],
 };
 
 type TProps = Readonly<IChildren>;
