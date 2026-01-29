@@ -1,338 +1,412 @@
-# Next.js TypeScript Starter Template
+# SmythOS SDK Practice
 
-A **production-ready**, **scalable**, and **actively maintained** starter template for building high-quality web apps with **Next.js**, **TypeScript**, and **Tailwind CSS**.
-
-<br/>
 <p align="center">
-  <img
-    src="https://img.shields.io/npm/v/next-ts-app?style=for-the-badge&label=next-ts-app&labelColor=black&logo=npm&color=success"
-    alt="next-ts-app version"
-  />
-  <img
-    src="https://img.shields.io/static/v1?label=License&message=MIT&labelColor=000000&color=007ACC&style=for-the-badge&logo=open-source-initiative&logoColor=white"
-    alt="License MIT"
-  />
+  <img src="https://img.shields.io/badge/SmythOS-SDK-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiPjxwYXRoIGQ9Ik0xMiAyYTEwIDEwIDAgMSAwIDEwIDEwQTEwIDEwIDAgMCAwIDEyIDJ6Ii8+PC9zdmc+" alt="SmythOS SDK" />
+  <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js" alt="Next.js 16" />
+  <img src="https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
 </p>
 
 <p align="center">
-<img src="https://img.shields.io/badge/Next.js-16.0.10-black?logo=next.js" alt="Nextjs">
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript">
-  <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
-  <img src="https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=white" alt="ESLint">
-  <img src="https://img.shields.io/badge/Prettier-F7B93E?logo=prettier&logoColor=black" alt="Prettier">
+  <strong>Learn to build AI Agents with SmythOS SDK through hands-on examples</strong>
 </p>
-<br/>
 
-## 🚀 Why Use This Template?
-
-This starter template is designed for **developers of all levels** — from beginners starting their journey to advanced engineers building scalable applications.
-
-### Key Features
-
-- ⚡️ **Next.js 16+** with App Router
-- ✅ **TypeScript** – full type safety and custom config
-- 🎨 **Tailwind CSS v4** – preconfigured and responsive
-- 🧹 **ESLint + Prettier** – clean, consistent code
-- 🌿 **Scalable folder structure** – production standard
-- 📦 **Alias support** – easy path management
-- 🧪 Ready for unit & integration testing
-- ☁️ Vercel ready – just push and deploy
-
-## How to Start
-
-### Option 1: Create with CLI **`(Recommended)`**
-
-Quickly set up your Next.js + TypeScript + TailwindCSS project using the CLI tool:
-
-- **📦 using npm**
-  ```bash
-  npx next-ts-app my-awesome-app
-  ```
-- Replace my-awesome-app with your desired project name.
-- The CLI will scaffold a fully configured Next.js + TypeScript + TailwindCSS starter for you.
-
-### ✅ Fast | 🔧 Pre-configured | 🧪 Ready for development
+<p align="center">
+  <a href="#-quick-start">Quick Start</a> •
+  <a href="#-practice-examples">Examples</a> •
+  <a href="#-features">Features</a> •
+  <a href="#-project-structure">Structure</a> •
+  <a href="#-environment-setup">Setup</a>
+</p>
 
 ---
 
-#### CLI Options
+## Overview
 
-During project creation, you'll be prompted to:
+This is an interactive learning project for the **SmythOS SDK** - a powerful toolkit for building AI agents. The project provides 6 progressively complex examples, from basic chat to advanced planner-coder workflows.
 
-1. **Project Name**: What's your project name? (e.g., `my-awesome-app`)
-2. **Package Manager**: Choose your preferred package manager:
+Each example is a fully working Next.js application with:
+- Modern, dark-themed UI
+- Real-time streaming responses
+- Interactive chat interface
+- Source code you can study and modify
 
-   - `⚡ bun` (Recommended - Fastest)
-   - `🚀 pnpm` (Fast & Efficient)
-   - `🧶 yarn` (Reliable)
-   - `📦 npm` (Standard)
+---
 
-3. **Husky Integration**: Set up Git hooks with Husky for automatic code quality checks:
+## Quick Start
 
-   - `No` (Default - Simpler setup) - Uses the `without-husky` branch template
-   - `Yes` (Recommended for code quality) - Uses the `main` branch template
+### Prerequisites
 
-### Husky Integration
+- **Node.js** 20.9.0 or higher
+- **pnpm** (recommended) or npm/yarn/bun
+- **API Keys** for LLM providers (OpenAI, Anthropic, Groq, etc.)
 
-**Without Husky (Default):**
-
-- ⚠️ Git hooks are disabled
-- ✅ Cleaner setup for simpler projects
-- ✅ Uses the `without-husky` branch of the template
-- 🔧 You can manually add Git hooks later if needed
-
-**With Husky (Recommended):**
-
-- ✅ Git hooks are automatically configured
-- ✅ ESLint and Prettier run on commit
-- ✅ Pre-commit hooks ensure code quality
-- ✅ Uses the `main` branch of the template
-
-3. Follow the steps shown:
-   For example, if you choose `bun`:
-
-   ```bash
-   cd my-awesome-project
-   bun install
-   bun run dev
-   ```
-
-   **Note**: If you pick `bun`, make sure Bun is installed (`npm install -g bun` or visit [bun.sh](https://bun.sh)). For `pnpm` or `yarn`, install them first if needed.
-
-### Available Scripts
-
-The project includes several useful scripts:
+### Installation
 
 ```bash
-# Development
-bun run dev          # Start development server with Turbopack
-bun run build        # Create production build
-bun run start        # Start production server
-bun run lint         # Run ESLint directly
-bun run lint:fix     # Fix ESLint errors
-bun run format       # Format code with Prettier
-bun run format:check # Check code formatting
-bun run clear-cache  # Clear Next.js cache, reinstall dependencies, and restart dev server
+# 1. Clone the repository
+git clone https://github.com/smythos/sdk-agent.git
+cd sdk-agent
+
+# 2. Install dependencies
+pnpm install
+
+# 3. Set up environment variables
+cp .env.example .env.local
+# Edit .env.local and add your API keys
+
+# 4. Start the development server
+pnpm dev
 ```
 
-**Note**: Next.js 16 has removed the `next lint` command. The template now uses ESLint directly.
+### Open in Browser
 
-The `clear-cache` script is particularly useful when you encounter build issues or need to reset your development environment. It:
+```
+http://localhost:3000          # Home page
+http://localhost:3000/practice # All practice examples
+```
 
-1. Removes the `.next` directory
-2. Reinstalls dependencies without using cache
-3. Restarts the development server
+---
 
-#### Prerequisites
+## Practice Examples
 
-- **Node.js**: Version 20.9.0 or higher (required for Next.js 16)
-- For **Bun**: Install via `npm install -g bun`
-- For **pnpm**: Install via `npm install -g pnpm`
-- For **Yarn**: Install via `npm install -g yarn`
-- For **npm**: Comes with Node.js
+### Learning Path (Beginner to Advanced)
 
-#### What's Included
+| # | Example | Complexity | Description | Key Concepts |
+|:-:|---------|:----------:|-------------|--------------|
+| 01 | **Basic Chat** | ⭐ | Simple chat with crypto price skill | Agent creation, Skills, `agent.chat()` |
+| 02 | **Streaming Chat** | ⭐⭐ | Real-time streaming responses | SSE, Event handlers, `TLLMEvent` |
+| 03 | **Persistent Chat** | ⭐⭐⭐ | Chat history that persists | Session management, Multiple skills |
+| 04 | **Local Model** | ⭐⭐⭐ | Use Ollama/LMStudio models | `Model.Local()`, Offline AI |
+| 05 | **Observability** | ⭐⭐⭐ | OpenTelemetry tracing | Monitoring, Debugging, Metrics |
+| 06 | **Planner Coder** | ⭐⭐⭐⭐⭐ | AI that plans and executes tasks | Multi-step workflows, Code generation |
 
-After installation, you'll get:
+### Example Details
 
-**Without Husky (Default - without-husky branch):**
+#### 01 - Basic Chat
+```typescript
+const agent = new Agent({
+  name: 'CryptoMarket Assistant',
+  behavior: 'You are a crypto price tracker...',
+  model: 'gpt-4o-mini',
+});
 
-- ✅ Next.js 16 with App Router
-- ✅ TypeScript configuration
-- ✅ Tailwind CSS v4 setup
-- ✅ ESLint & Prettier
-- ✅ Project structure ready to go
+agent.addSkill({
+  name: 'Price',
+  description: 'Get cryptocurrency price',
+  process: async ({ coin_id }) => {
+    // Fetch price from CoinGecko API
+  },
+});
 
-### Option 2: Use GitHub Template
+const chat = agent.chat();
+const response = await chat.prompt('What is the price of Bitcoin?');
+```
 
-1. Click **[Use this template](https://github.com/Salman-Ahamed/Next.js-TypeScript-Starter-Template)** on GitHub.
-2. Name your new repository.
-3. Click `Create repository`.
+#### 02 - Streaming Chat
+```typescript
+const streamResult = await chat.prompt('Tell me about Ethereum').stream();
 
-4. Set up locally:
+streamResult.on(TLLMEvent.Content, (content) => {
+  process.stdout.write(content); // Real-time output
+});
 
-   ```bash
-   git clone https://github.com/[your-username]/[your-repo].git
-   cd [your-repo]
-   bun install
-   bun run dev
-   ```
+streamResult.on(TLLMEvent.ToolCall, (toolCall) => {
+  console.log('Tool called:', toolCall.name);
+});
+
+streamResult.on(TLLMEvent.End, () => {
+  console.log('Stream complete');
+});
+```
+
+#### 03 - Persistent Chat
+```typescript
+const agent = new Agent({
+  id: 'crypto-assistant',  // Required for persistence
+  name: 'CryptoMarket Assistant',
+  model: 'gpt-4o-mini',
+});
+
+// Create persistent chat session
+const chat = agent.chat({
+  id: 'user-session-123',
+  persist: true,  // Enable persistence
+});
+```
+
+#### 04 - Local Model
+```typescript
+import { Model } from '@smythos/sdk';
+
+const agent = new Agent({
+  name: 'Local Assistant',
+  model: Model.Local('llama3.2'),  // Uses Ollama
+  // or: Model.Local('your-model', { baseUrl: 'http://localhost:1234/v1' })
+});
+```
+
+#### 05 - Observability
+```typescript
+import { trace } from '@opentelemetry/api';
+
+const tracer = trace.getTracer('my-app');
+const span = tracer.startSpan('chat-request');
+
+// All agent operations are automatically traced
+const response = await chat.prompt('Hello');
+
+span.end();
+```
+
+#### 06 - Planner Coder
+```typescript
+const agent = new Agent({
+  name: 'Planner Coder',
+  behavior: 'You plan and execute coding tasks...',
+  planner: true,  // Enable planner mode
+});
+
+agent.addSkill({ name: 'WriteFile', ... });
+agent.addSkill({ name: 'ReadFile', ... });
+agent.addSkill({ name: 'ExecuteCode', ... });
+
+// Agent automatically breaks down complex tasks
+const response = await chat.prompt('Create a REST API for user management');
+```
+
+---
+
+## Features
+
+### SDK Features Demonstrated
+
+- **Agent Creation** - Configure name, behavior, and model
+- **Skills** - Add custom capabilities to agents
+- **Streaming** - Real-time token-by-token responses
+- **Persistence** - Save and restore chat sessions
+- **Local Models** - Use Ollama, LMStudio, or any OpenAI-compatible endpoint
+- **Observability** - OpenTelemetry integration for monitoring
+- **Planner Mode** - Multi-step task decomposition and execution
+
+### Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **Next.js 16** | React framework with App Router |
+| **TypeScript** | Type safety |
+| **Tailwind CSS 4** | Styling |
+| **SmythOS SDK** | AI agent development |
+| **Server-Sent Events** | Real-time streaming |
+
+---
+
+## Environment Setup
+
+### Step 1: Create `.env.local`
+
+```bash
+cp .env.example .env.local
+```
+
+### Step 2: Add API Keys
+
+```env
+# Required: At least one LLM provider
+OPENAI_API_KEY=sk-proj-xxx...
+ANTHROPIC_API_KEY=sk-ant-xxx...
+GROQ_API_KEY=gsk_xxx...
+
+# Optional: Additional providers
+GOOGLE_AI_API_KEY=
+TOGETHER_API_KEY=
+XAI_API_KEY=
+DEEPSEEK_API_KEY=
+TAVILY_API_KEY=
+SCRAPFLY_API_KEY=
+```
+
+### Step 3: Vault Configuration
+
+The `.smyth/vault.json` file uses environment variable references:
+
+```json
+{
+  "default": {
+    "openai": "$env(OPENAI_API_KEY)",
+    "anthropic": "$env(ANTHROPIC_API_KEY)",
+    "groq": "$env(GROQ_API_KEY)"
+  }
+}
+```
+
+The SDK automatically resolves `$env(VARIABLE_NAME)` at runtime.
+
+### Getting API Keys
+
+| Provider | Free Tier | Get Key |
+|----------|:---------:|---------|
+| OpenAI | No | [platform.openai.com](https://platform.openai.com/api-keys) |
+| Anthropic | No | [console.anthropic.com](https://console.anthropic.com/) |
+| Groq | Yes | [console.groq.com](https://console.groq.com/keys) |
+| Google AI | Yes | [aistudio.google.com](https://aistudio.google.com/apikey) |
+
+---
 
 ## Project Structure
 
 ```
-public/                      # Public static assets that are served directly
-├── assets/                  # Static assets directory
-│   ├── images/             # Image files (png, jpg, svg, etc.)
-│   └── data/               # Static JSON data files
-│
-src/                        # Source code directory
-├── app/                    # Next.js 13+ App Router directory
-│   ├── (landing)/         # Landing page route group (optional)
-│   │   ├── _components/    # Page-specific components
-│   │   ├── error.tsx      # Error boundary for landing page
-│   │   ├── loading.tsx    # Loading state for landing page
-│   │   └── page.tsx       # Landing page entry point
-│   │
-│   ├── (dashboard)/       # Dashboard route group
-│   │   ├── _components/    # Dashboard-specific components
-│   │   ├── error.tsx      # Error boundary for dashboard
-│   │   ├── loading.tsx    # Loading state for dashboard
-│   │   └── page.tsx       # Dashboard page entry
-│   │
-│   ├── layout.tsx         # Root layout (shared across all pages)
-│   ├── template.tsx       # Template for per-page layouts
-│   └── providers.tsx      # Global context providers (Theme, Auth, etc.)
-│
-├── components/            # Reusable components directory
-│   ├── ui/               # UI primitives (buttons, inputs, cards)
-│   │   ├── button.tsx    # Button component
-│   │   ├── input.tsx     # Input component
-│   │   └── card.tsx      # Card component
-│   │
-│   ├── layout/           # Layout components
-│   │   ├── header.tsx    # Header component
-│   │   ├── footer.tsx    # Footer component
-│   │   └── sidebar.tsx   # Sidebar component
-│   │
-│   ├── shared/           # Shared components across features
-│   │   ├── ThemeToggle.tsx  # Theme toggle component
-│   │   └── Analytics.tsx    # Analytics component
-│   │
-│   ├── forms/            # Form-related components
-│   │   ├── FormInput.tsx    # Form input component
-│   │   └── FormSelect.tsx   # Form select component
-│   │
-│   └── icons/            # SVG icon components
-│       ├── index.tsx     # Icon exports
-│       └── SocialIcons/  # Social media icons
-│
-├── config/               # Application configuration
-│   ├── site.ts          # Site metadata and configuration
-│   ├── routes.ts        # Route definitions and constants
-│   └── theme.ts         # Theme configuration and tokens
-│
-├── hooks/               # Custom React hooks
-│   ├── useAuth.ts       # Authentication hook
-│   ├── useAnalytics.ts  # Analytics hook
-│   ├── useDebounce.ts   # Debounce utility hook
-│   └── useLocalStorage.ts # Local storage hook
-│
-├── lib/                 # Utility libraries and helpers
-│   ├── api/            # API client configurations
-│   │   ├── axios.ts    # Axios instance and interceptors
-│   │   └── trpc/       # tRPC client setup
-│   │
-│   ├── utils/          # Utility functions
-│   │   ├── formatter.ts # Data formatting utilities
-│   │   └── validators.ts # Validation utilities
-│   │
-│   └── constants.ts    # Application constants
-│
-├── styles/             # Global styles and CSS
-│   ├── globals.css     # Global CSS styles
-│   ├── theme/          # Theme variables and tokens
-│   └── components/     # Component-specific styles
-│
-├── types/              # TypeScript type definitions
-│   ├── index.d.ts      # Global type declarations
-│   ├── next.d.ts       # Next.js type extensions
-│   └── custom-types.ts # Custom type definitions
-│
-├── services/           # Business logic and services
-│   ├── auth.service.ts    # Authentication service
-│   └── analytics.service.ts # Analytics service
-│
-├── contexts/           # React Context providers
-│   ├── ThemeContext.tsx  # Theme context
-│   └── AuthContext.tsx   # Authentication context
-│
-└── __tests__/         # Test files directory
-    ├── components/     # Component tests
-    ├── hooks/         # Hook tests
-    ├── services/      # Service tests
-    └── utils/         # Utility function tests
+sdk-agent/
+├── .smyth/
+│   └── vault.json              # API keys vault (uses env vars)
+├── src/
+│   ├── app/
+│   │   ├── page.tsx            # Home page
+│   │   ├── practice/
+│   │   │   ├── page.tsx        # Practice examples index
+│   │   │   ├── 01-basic-chat/
+│   │   │   │   └── page.tsx    # Basic chat UI
+│   │   │   ├── 02-streaming-chat/
+│   │   │   │   └── page.tsx    # Streaming chat UI
+│   │   │   ├── 03-persistent-chat/
+│   │   │   │   └── page.tsx    # Persistent chat UI
+│   │   │   ├── 04-local-model/
+│   │   │   │   └── page.tsx    # Local model UI
+│   │   │   ├── 05-observability/
+│   │   │   │   └── page.tsx    # Observability UI
+│   │   │   └── 06-planner-chat/
+│   │   │       └── page.tsx    # Planner coder UI
+│   │   └── api/
+│   │       └── practice/
+│   │           ├── 01-basic-chat/
+│   │           │   └── route.ts    # Basic chat API
+│   │           ├── 02-streaming-chat/
+│   │           │   └── route.ts    # Streaming API (SSE)
+│   │           ├── 03-persistent-chat/
+│   │           │   └── route.ts    # Persistent API
+│   │           ├── 04-local-model/
+│   │           │   └── route.ts    # Local model API
+│   │           ├── 05-observability/
+│   │           │   └── route.ts    # Observability API
+│   │           └── 06-planner-chat/
+│   │               └── route.ts    # Planner API
+│   ├── components/             # Shared components
+│   ├── lib/                    # Utilities and data
+│   └── styles/                 # Global styles
+├── .env.local                  # Environment variables (create this)
+├── .env.example                # Example env file
+└── package.json
 ```
-
-## Code Quality Tools
-
-These tools keep your code neat:
-
-- **ESLint**: Finds code mistakes.
-- **Prettier**: Formats code nicely.
-- **Tailwind CSS**: Organizes styles.
-
-Example rule for imports:
-
-```javascript
-"import/order": [
-  "error",
-  {
-    "groups": ["builtin", "external", "internal"],
-    "alphabetize": { "order": "asc" }
-  }
-]
-```
-
-## Deployment
-
-This template works with:
-
-- Vercel
-- Netlify
-- AWS
-- Docker
-
-Copy `.env.example` to `.env` for production settings.
-
-## Developer & Contributor
-
-<div align="center"> <table> <tr> <td align="center">
-<img src="https://github.com/Salman-Ahamed.png" width="80" height="80" alt="Salman Ahamed" /><br /> <b>Salman Ahamed</b><br/> <a href="https://github.com/Salman-Ahamed">GitHub</a> | <a href="https://www.linkedin.com/in/salman-ahamad-as/">LinkedIn</a> | <a href="mailto:shahriyar.hosen.dev@gmail.com">Email</a> </td> <td align="center">
-<img src="https://github.com/eyachirarafat.png" width="80" height="80" alt="Eyachir Arafat" /><br /> <b>Eyachir Arafat</b><br/> <a href="https://github.com/eyachirarafat">GitHub</a> | <a href="https://www.linkedin.com/in/eyachirarafat/">LinkedIn</a> | <a href="https://eyachirarafat.vercel.app/">Portfolio</a> </td> <td align="center">
-<img src="https://github.com/mdamzadhossainomor.png" width="80" height="80" alt="Md Amzad Hossain Omor" /><br /> <b>Md Amzad Hossain</b><br/> <a href="https://github.com/mdamzadhossainomor">GitHub</a> | <a href="https://www.linkedin.com/in/md-amzad-hossain-omor/">LinkedIn</a> | <a href="mailto:mdamzadhossainomor@gmail.com">Email</a> </td> <td align="center">
-<img src="https://github.com/Hashibul-Alam.png" width="80" height="80" alt="Hasibul Alam" /><br /> <b>Hasibul Alam</b><br/> <a href="https://github.com/Hashibul-Alam">GitHub</a> | <a href="https://www.linkedin.com/in/hasibul231/">LinkedIn</a> | <a href="mailto:sha31417@gmail.com">Email</a> </td> </tr> </table> </div>
 
 ---
 
-## Changelog
+## Available Scripts
 
-### v1.4.0 (Latest)
+```bash
+# Development
+pnpm dev              # Start dev server with Turbopack
+pnpm build            # Production build
+pnpm start            # Start production server
 
-- **Major Update**: Upgraded to Next.js 16.0.10
-- **React 19**: Full support for React 19 features
-- **Tailwind CSS v4**: Using the latest Tailwind CSS version
-- **TypeScript**: Updated to ES2022 target for better performance
-- **ESLint**: Updated to latest Next.js 16 compatible version
-- **Prettier**: Updated to v3.4.2
-- **Performance**: Improved build times and runtime performance
-- **Breaking Changes**:
-  - Removed `next lint` command (use `eslint .` directly)
-  - Node.js 20.9.0+ now required
-- **Dependencies**: Added missing ESLint plugins (@typescript-eslint/eslint-plugin, @typescript-eslint/parser, eslint-plugin-import)
-- **Configuration**: Improved .gitignore with IDE and OS entries
+# Code Quality
+pnpm lint             # Run ESLint
+pnpm lint:fix         # Fix ESLint errors
+pnpm format           # Format with Prettier
+pnpm format:check     # Check formatting
 
-### v1.3.0
+# Maintenance
+pnpm clear-cache      # Clear Next.js cache and reinstall
+```
 
-- **New Feature**: Interactive Husky selection during project creation
-- **Template Branches**: Support for both `main` and `without-husky` branches
-- **Enhanced CLI**: Better argument handling and help documentation
-- **Improved UX**: Clear feedback about which template is being used
-- **Better Progress**: Enhanced progress indicators and user feedback
-- **Professional Prompts**: Beautiful emojis and improved messaging throughout
-- **Default Behavior**: Husky disabled by default for simpler setup
+---
 
-### v1.2.40
+## Local Model Setup (Example 04)
 
-- **Initial Release**: Basic CLI functionality
-- **Package Manager Selection**: Support for bun, pnpm, yarn, npm
-- **Beautiful UI**: Progress indicators and colorful output
-- **Fast Setup**: Quick project initialization with degit
+To use the Local Model example, you need a local LLM server:
 
-## Want to Help?
+### Option 1: Ollama (Recommended)
 
-Check our [CONTRIBUTING GUIDE](CONTRIBUTING.md) to contribute.
+```bash
+# Install Ollama
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Pull a model
+ollama pull llama3.2
+
+# Start Ollama (runs on port 11434)
+ollama serve
+```
+
+### Option 2: LM Studio
+
+1. Download from [lmstudio.ai](https://lmstudio.ai/)
+2. Load any model
+3. Start the local server (default: `http://localhost:1234/v1`)
+
+---
+
+## Troubleshooting
+
+### Common Issues
+
+#### "Rate limit exceeded"
+- **Solution**: Use a smaller model like `gpt-4o-mini` or switch to Groq (free tier)
+
+#### "API key not found"
+- **Solution**: Check `.env.local` has correct keys and restart dev server
+
+#### "Cannot connect to local model"
+- **Solution**: Ensure Ollama/LMStudio is running and accessible
+
+#### "Module not found: styled-jsx"
+- **Solution**: Remove any `<style jsx>` blocks; use Tailwind CSS instead
+
+#### "OS file watch limit reached" (Linux)
+```bash
+# Temporary fix
+sudo sysctl fs.inotify.max_user_watches=524288
+
+# Permanent fix
+echo "fs.inotify.max_user_watches=524288" | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+```
+
+---
+
+## Learn More
+
+### SmythOS Resources
+
+- [SmythOS Documentation](https://docs.smythos.com)
+- [SmythOS SDK Reference](https://docs.smythos.com/sdk)
+- [SmythOS GitHub](https://github.com/smythos)
+
+### Technologies Used
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [OpenTelemetry](https://opentelemetry.io/docs/)
+
+---
+
+## Contributing
+
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
 
 ## License
 
-Free to use under [MIT License](LICENSE). See the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<p align="center">
+  Made with ❤️ by the SmythOS Team
+</p>
