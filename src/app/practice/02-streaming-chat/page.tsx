@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 interface ChatMessage {
@@ -186,6 +187,15 @@ export default function StreamingChatPage() {
             <header className="relative z-10 border-b border-white/10 bg-slate-900/80 px-6 py-4 backdrop-blur-xl">
                 <div className="mx-auto flex max-w-4xl items-center justify-between">
                     <div className="flex items-center gap-4">
+                        {/* Back Button */}
+                        <Link
+                            href="/practice"
+                            className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-gray-400 transition hover:bg-white/10 hover:text-white"
+                        >
+                            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </Link>
                         <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-linear-to-br from-cyan-500 to-teal-600 shadow-lg shadow-cyan-500/25">
                             <svg
                                 className="h-6 w-6 text-white"

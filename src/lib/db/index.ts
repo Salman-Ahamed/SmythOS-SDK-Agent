@@ -1,59 +1,158 @@
 import {
-  CheckIcon,
+  BrainIcon,
+  ChartIcon,
+  ChatBubbleIcon,
   CodeIcon,
-  CPUIcon,
+  CubeIcon,
+  DatabaseIcon,
   GlobeIcon,
-  LayerIcon,
   LinkedInIcon,
-  LockIcon,
   MailIcon,
+  PlannerIcon,
+  ServerIcon,
+  ShieldIcon,
+  SparklesIcon,
+  StreamIcon,
   ZapIcon,
 } from "@/components/icons";
 
 import { FooterLinks } from "@/types/data";
 
-export const features = [
+// SmythOS SDK Examples Data
+export const sdkExamples = [
   {
-    icon: CodeIcon,
-    title: "Next.js 15 (App Router)",
-    description:
-      "Cutting-edge Next.js with App Router, Server Components, and optimized RSC patterns.",
+    id: "01",
+    slug: "01-basic-chat",
+    title: "Basic Chat",
+    description: "Learn the fundamentals of creating an AI agent with simple chat functionality.",
+    complexity: 1,
+    features: ["Agent Creation", "Skill Integration", "Chat API"],
+    icon: ChatBubbleIcon,
+    gradient: "from-indigo-500 to-purple-500",
+    status: "completed" as const,
   },
   {
-    icon: ZapIcon,
-    title: "Bun Runtime",
-    description:
-      "Lightning-fast JavaScript runtime with built-in TypeScript support and package management.",
+    id: "02",
+    slug: "02-streaming-chat",
+    title: "Streaming Chat",
+    description: "Real-time streaming responses with Server-Sent Events (SSE).",
+    complexity: 2,
+    features: ["SSE Streaming", "Event Handlers", "Real-time UI"],
+    icon: StreamIcon,
+    gradient: "from-cyan-500 to-teal-500",
+    status: "completed" as const,
   },
   {
-    icon: LockIcon,
-    title: "TypeScript First",
-    description: "Strict TypeScript configuration with path aliases and type-checked CI pipeline.",
+    id: "03",
+    slug: "03-persistent-chat",
+    title: "Persistent Chat",
+    description: "Chat sessions with memory persistence across conversations.",
+    complexity: 3,
+    features: ["Session Persistence", "Multiple Skills", "Data Isolation"],
+    icon: DatabaseIcon,
+    gradient: "from-purple-500 to-pink-500",
+    status: "completed" as const,
   },
   {
-    icon: CPUIcon,
-    title: "Performance Optimized",
-    description: "Pre-configured for maximum performance with PPR, caching, and bundle analysis.",
+    id: "04",
+    slug: "04-local-model",
+    title: "Local Model",
+    description: "Run AI agents with local models like Ollama for offline capability.",
+    complexity: 3,
+    features: ["Ollama Integration", "Offline AI", "Custom Models"],
+    icon: ServerIcon,
+    gradient: "from-orange-500 to-red-500",
+    status: "completed" as const,
   },
   {
-    icon: LayerIcon,
-    title: "Modular Architecture",
-    description: "Clean, scalable structure with domain-driven design patterns.",
+    id: "05",
+    slug: "05-observability",
+    title: "Observability",
+    description: "OpenTelemetry integration for tracing, monitoring, and debugging.",
+    complexity: 3,
+    features: ["OpenTelemetry", "Tracing", "Performance Metrics"],
+    icon: ChartIcon,
+    gradient: "from-green-500 to-emerald-500",
+    status: "completed" as const,
   },
   {
-    icon: CheckIcon,
-    title: "Production Ready",
-    description: "All the tooling you need for CI/CD, monitoring, and error tracking.",
+    id: "06",
+    slug: "06-planner-chat",
+    title: "Planner Coder",
+    description: "Advanced planner mode for multi-step task execution and code generation.",
+    complexity: 5,
+    features: ["Planner Mode", "Code Generation", "Multi-step Workflows"],
+    icon: PlannerIcon,
+    gradient: "from-violet-500 to-fuchsia-500",
+    status: "completed" as const,
   },
 ];
 
+// SDK Capabilities/Features
+export const features = [
+  {
+    icon: BrainIcon,
+    title: "Intelligent Agents",
+    description:
+      "Create AI agents with custom behaviors, personalities, and domain expertise using simple configuration.",
+  },
+  {
+    icon: SparklesIcon,
+    title: "Skill System",
+    description:
+      "Extend agent capabilities with custom skills - from API calls to complex business logic.",
+  },
+  {
+    icon: StreamIcon,
+    title: "Real-time Streaming",
+    description:
+      "Stream responses in real-time with event handlers for content, tool calls, and errors.",
+  },
+  {
+    icon: DatabaseIcon,
+    title: "Persistent Memory",
+    description:
+      "Enable agents to remember conversations across sessions with built-in persistence.",
+  },
+  {
+    icon: ChartIcon,
+    title: "Observability",
+    description:
+      "Built-in OpenTelemetry support for tracing, metrics, and debugging your AI applications.",
+  },
+  {
+    icon: ShieldIcon,
+    title: "Enterprise Ready",
+    description:
+      "Production-grade SDK with access control, security, and scalability built-in.",
+  },
+];
+
+// Terminal commands for SDK setup
 export const terminalCommands = [
-  { command: "npx next-ts-app my-awesome-app", description: "Scaffold new project" },
-  { command: "bun install", description: "Install dependencies" },
-  { command: "bun run dev", description: "Start dev server" },
-  { command: "bun run build", description: "Production build" },
-  { command: "bun run lint", description: "Run linter" },
-  { command: "bun run clear-cache", description: "Clear cache and reset dev environment" },
+  { command: "npm install @smythos/sdk", description: "Install SmythOS SDK" },
+  { command: "import { Agent } from '@smythos/sdk'", description: "Import Agent class" },
+  { command: "const agent = new Agent({ name: 'My Agent', model: 'gpt-4o' })", description: "Create agent" },
+  { command: "agent.addSkill({ name: 'Search', process: async (q) => {...} })", description: "Add skills" },
+  { command: "const chat = agent.chat()", description: "Start chat session" },
+  { command: "const response = await chat.prompt('Hello!')", description: "Send message" },
+];
+
+// SDK Stats
+export const sdkStats = [
+  { value: "6", label: "Practice Examples", suffix: "" },
+  { value: "15", label: "SDK Features", suffix: "+" },
+  { value: "100", label: "Type Safe", suffix: "%" },
+];
+
+// Technology stack
+export const techStack = [
+  { name: "Next.js 15", icon: CubeIcon },
+  { name: "SmythOS SDK", icon: BrainIcon },
+  { name: "TypeScript", icon: CodeIcon },
+  { name: "Tailwind CSS", icon: SparklesIcon },
+  { name: "OpenAI", icon: ZapIcon },
+  { name: "OpenTelemetry", icon: ChartIcon },
 ];
 
 export const author = {
@@ -106,23 +205,15 @@ export const teamMembers = [
 
 export const footerLinks: FooterLinks = {
   quickLinks: [
-    { id: 1, name: "NPM Package", path: "https://www.npmjs.com/package/next-ts-app" },
-    {
-      id: 2,
-      name: "Template Repository",
-      path: "https://github.com/Salman-Ahamed/Next.js-TypeScript-Starter-Template",
-    },
-    {
-      id: 3,
-      name: "Become a Contributor",
-      path: "https://github.com/Salman-Ahamed/Next.js-TypeScript-Starter-Template/blob/main/CONTRIBUTING.md",
-    },
+    { id: 1, name: "Practice Examples", path: "/practice" },
+    { id: 2, name: "SmythOS Documentation", path: "https://docs.smythos.com" },
+    { id: 3, name: "GitHub Repository", path: "https://github.com/smythos/sre" },
   ],
   resources: [
     { id: 1, name: "Next.js Docs", path: "https://nextjs.org/docs" },
     { id: 2, name: "TypeScript Docs", path: "https://www.typescriptlang.org/docs" },
-    { id: 3, name: "Tailwind CSS Docs", path: "https://tailwindcss.com/docs" },
-    { id: 4, name: "Bun Docs", path: "https://bun.sh/" },
+    { id: 3, name: "OpenAI API", path: "https://platform.openai.com/docs" },
+    { id: 4, name: "OpenTelemetry", path: "https://opentelemetry.io/docs/" },
   ],
   contact: [
     {
@@ -135,15 +226,7 @@ export const footerLinks: FooterLinks = {
     { id: 3, name: "Email", Icon: MailIcon, path: "mailto:shahriyar.hosen.dev@gmail.com" },
   ],
   privacy: [
-    {
-      id: 1,
-      name: "For more information",
-      path: "https://www.npmjs.com/package/next-ts-app?activeTab=readme",
-    },
-    {
-      id: 2,
-      name: "MIT License",
-      path: "https://github.com/Salman-Ahamed/Next.js-TypeScript-Starter-Template/blob/main/LICENSE",
-    },
+    { id: 1, name: "SmythOS Platform", path: "https://smythos.com" },
+    { id: 2, name: "MIT License", path: "https://github.com/smythos/sre/blob/main/LICENSE" },
   ],
 };

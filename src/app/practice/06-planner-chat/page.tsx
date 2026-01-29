@@ -455,15 +455,6 @@ export default function PlannerChatPage() {
                 </footer>
             </main>
 
-            <style jsx global>{`
-        @keyframes shimmer {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
-        }
-        .animate-shimmer {
-          animation: shimmer 2s infinite;
-        }
-      `}</style>
         </div>
     );
 }

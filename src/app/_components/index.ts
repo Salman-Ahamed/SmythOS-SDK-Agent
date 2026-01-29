@@ -1,4 +1,5 @@
 export * from "./cta-section";
+export * from "./examples-showcase";
 export * from "./feature-grid";
 export * from "./footer";
 export * from "./glow-card";

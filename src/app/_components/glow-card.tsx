@@ -1,10 +1,23 @@
-import { FC } from "react";
+import { FC, HTMLAttributes } from "react";
 
-export const GlowCard: FC<IClassNameWithChildren> = ({ children, className }) => (
+interface GlowCardProps extends HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const GlowCard: FC<GlowCardProps> = ({ children, className = "", ...props }) => (
   <div
-    className={`relative overflow-hidden rounded-xl border border-gray-800 bg-gray-900/50 transition-transform duration-300 hover:-translate-y-1 ${className}`}
+    className={`group relative overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900/50 backdrop-blur-sm transition-all duration-500 hover:border-gray-700/50 hover:bg-gray-900/80 ${className}`}
+    {...props}
   >
-    <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 opacity-0 transition-opacity duration-300 hover:opacity-100" />
-    {children}
+    {/* Gradient overlay on hover */}
+    <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 via-transparent to-fuchsia-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+    {/* Corner glow effect */}
+    <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-violet-500/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
+    <div className="absolute -bottom-20 -left-20 h-40 w-40 rounded-full bg-fuchsia-500/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
+
+    {/* Content */}
+    <div className="relative z-10">{children}</div>
   </div>
 );
