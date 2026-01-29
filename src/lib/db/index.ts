@@ -155,54 +155,6 @@ export const techStack = [
   { name: "OpenTelemetry", icon: ChartIcon },
 ];
 
-export const author = {
-  name: "Salman Ahamed",
-  img: "https://avatars.githubusercontent.com/u/96829173?v=4",
-  role: "Full-Stack Developer",
-  bio: "Full-Stack Developer with 3+ years of experience in building modern web apps using Next.js, TypeScript, and Node.js. Passionate about clean code, performance, and developer experience.",
-  social: [
-    { id: "1", name: "GitHub", link: "https://github.com/Salman-Ahamed" },
-    { id: "2", name: "LinkedIn", link: "https://www.linkedin.com/in/salman-ahamad-as/" },
-    { id: "3", name: "Email", link: "mailto:shahriyar.hosen.dev@gmail.com" },
-  ],
-};
-
-export const teamMembers = [
-  {
-    name: "Eyachir Arafat",
-    img: "https://avatars.githubusercontent.com/u/177961704?v=4",
-    role: "Front-End Developer",
-    bio: "Crafting beautiful web experiences with React and Next.js. Dedicated to building intuitive interfaces that users love.",
-    social: [
-      { id: "1", name: "GitHub", link: "https://github.com/EyachirArafat" },
-      { id: "2", name: "LinkedIn", link: "https://linkedin.com/in/eyachirarafat" },
-      { id: "3", name: "Email", link: "mailto:me.eyachirarafat@gmail.com" },
-    ],
-  },
-  {
-    name: "Sheikh Hasibul Alam",
-    img: "https://avatars.githubusercontent.com/u/145800508?v=4",
-    role: "Front-End Developer",
-    bio: "Building modern web applications with React and Next.js. Focused on performance, accessibility, and clean code.",
-    social: [
-      { id: "1", name: "GitHub", link: "https://github.com/Hashibul-Alam" },
-      { id: "2", name: "LinkedIn", link: "https://www.linkedin.com/in/hasibul231/" },
-      { id: "3", name: "Email", link: "mailto:sha31417@gmail.com" },
-    ],
-  },
-  {
-    name: "Md Amzad Hossain Omor",
-    img: "https://avatars.githubusercontent.com/u/139708044?v=4",
-    role: "Front-End Developer",
-    bio: "Creating responsive web applications with React and Tailwind CSS. Passionate about modern UI/UX design.",
-    social: [
-      { id: "1", name: "GitHub", link: "https://github.com/mdamzadhossainomor" },
-      { id: "2", name: "LinkedIn", link: "https://www.linkedin.com/in/md-amzad-hossain-omor" },
-      { id: "3", name: "Email", link: "mailto:mdamzadhossainomor@gmail.com" },
-    ],
-  },
-];
-
 export const footerLinks: FooterLinks = {
   quickLinks: [
     { id: 1, name: "Practice Examples", path: "/practice" },
